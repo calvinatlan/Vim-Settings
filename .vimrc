@@ -51,6 +51,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'neowit/vim-force.com'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -66,3 +68,8 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'wombat'
 
+" Vim-Force.com
+let g:apex_tooling_force_dot_com_path = '/Users/calvinatlan/.vim/bundle/vim-force.com/tooling-force.com-0.3.8.0.jar'
+let g:apex_backup_folder = '/Users/calvinatlan/Apex/Backup'
+let g:apex_temp_folder = '/Users/calvinatlan/Apex/Temp'
+let g:apex_properties_folder = 'Users/calvinatlan/Apex/sf.properties'
