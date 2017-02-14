@@ -44,6 +44,13 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'ajh17/VimCompletesMe'
+
+Plugin 'mattn/emmet-vim'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -52,3 +59,10 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+" Powerline
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'wombat'
+
