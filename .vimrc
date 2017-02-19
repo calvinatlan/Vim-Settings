@@ -27,10 +27,15 @@ let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>
 inoremap kj <esc>
 
+" Split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Autosave folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
 " Vundle
 filetype off
@@ -53,20 +58,21 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'neowit/vim-force.com'
 
+Plugin 'tpope/vim-surround'
+
 call vundle#end()
 filetype plugin indent on
 
 " Solarized Color Scheme
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
 colorscheme solarized
 
 " Powerline
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'solarized'
 
 " Vim-Force.com
 let g:apex_tooling_force_dot_com_path = '/Users/calvinatlan/.vim/bundle/vim-force.com/tooling-force.com-0.3.8.0.jar'
