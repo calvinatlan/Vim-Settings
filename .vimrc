@@ -36,6 +36,7 @@ nnoremap <C-Right> <ESC>:bn<CR>
 nnoremap <C-Left> <ESC>:bN<CR>
 nnoremap <C-L> <ESC>:bn<CR>
 nnoremap <C-H> <ESC>:bN<CR>
+nnoremap <C-w><C-w> <ESC>:bp<CR>:bd#<CR>
 
 " Vundle
 filetype off
