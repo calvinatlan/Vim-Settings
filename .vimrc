@@ -63,8 +63,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'neowit/vim-force.com'
 
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'leafgarland/typescript-vim'
+Plugin 'udalov/kotlin-vim'
 
 call vundle#end()
 filetype plugin indent on
