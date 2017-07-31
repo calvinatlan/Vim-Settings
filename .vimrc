@@ -101,3 +101,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["html"] }
+
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
