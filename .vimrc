@@ -38,6 +38,10 @@ nnoremap <C-L> <ESC>:bn<CR>
 nnoremap <C-H> <ESC>:bN<CR>
 nnoremap <C-w><C-w> <ESC>:bp<CR>:bd#<CR>
 
+" Import Typescript Component
+nnoremap <leader>i :TsuImport<CR>
+inoremap <leader>i <ESC>:TsuImport<CR>a
+
 " Vundle
 filetype off
 
@@ -53,7 +57,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic.git'
 
-Plugin 'ajh17/VimCompletesMe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/a.vim'
 
 Plugin 'mattn/emmet-vim'
 
@@ -65,8 +70,12 @@ Plugin 'neowit/vim-force.com'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 
+" Typescript development
 Plugin 'leafgarland/typescript-vim'
-Plugin 'udalov/kotlin-vim'
+Plugin 'jason0x43/vim-js-indent'
+Plugin 'Quramy/vim-js-pretty-template'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 filetype plugin indent on
