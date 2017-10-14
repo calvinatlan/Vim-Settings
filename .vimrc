@@ -57,7 +57,10 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic.git'
 
+" Autocomplete
 Plugin 'Valloric/YouCompleteMe'
+
+" Switch between .c and .h files
 Plugin 'vim-scripts/a.vim'
 
 Plugin 'mattn/emmet-vim'
@@ -69,6 +72,10 @@ Plugin 'neowit/vim-force.com'
 
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
+
+" Ctrl+p and file/buffer searching
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/unite.vim'
 
 " Typescript development
 Plugin 'leafgarland/typescript-vim'
@@ -101,6 +108,9 @@ let g:apex_properties_folder = 'Users/calvinatlan/Apex/sf.properties'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+"Unite.vim keybinds
+nnoremap <C-p> :Unite file_rec/async<cr>
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
