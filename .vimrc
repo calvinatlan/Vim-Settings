@@ -127,6 +127,9 @@ let g:syntastic_mode_map = {
 
 let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 
+" Graph filetype
+au BufNewFile,BufRead *.gv set filetype=graph
+
 if $VIM_CRONTAB == "true"
     set nobackup
     set nowritebackup
