@@ -38,6 +38,11 @@ nnoremap <C-L> <ESC>:bn<CR>
 nnoremap <C-H> <ESC>:bN<CR>
 nnoremap <C-w><C-w> <ESC>:bp<CR>:bd#<CR>
 
+" Angular navigation
+nnoremap <C-i> <ESC>:e %:r.ts<CR>
+nnoremap <C-o> <ESC>:e %:r.html<CR>
+nnoremap <C-p> <ESC>:e %:r.css<CR>
+
 " Import Typescript Component
 nnoremap <leader>i :TsuImport<CR>
 inoremap <leader>i <ESC>:TsuImport<CR>a
@@ -74,6 +79,7 @@ Plugin 'tpope/vim-surround'
 
 " Typescript development
 Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'Quramy/tsuquyomi'
@@ -99,6 +105,12 @@ let g:apex_backup_folder = '/Users/calvinatlan/Apex/Backup'
 let g:apex_temp_folder = '/Users/calvinatlan/Apex/Temp'
 let g:apex_properties_folder = 'Users/calvinatlan/Apex/sf.properties'
 
+" YouCompleteMe / Typescript
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -112,6 +124,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["html"] }
+
+let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 
 if $VIM_CRONTAB == "true"
     set nobackup
