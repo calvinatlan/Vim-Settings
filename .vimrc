@@ -8,7 +8,7 @@ set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " Side numbers
 set number
@@ -26,7 +26,6 @@ set hlsearch
 " Keymaps
 let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>
-inoremap kj <esc>
 
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -38,15 +37,6 @@ nnoremap <C-Left> <ESC>:bN<CR>
 nnoremap <C-L> <ESC>:bn<CR>
 nnoremap <C-H> <ESC>:bN<CR>
 nnoremap <C-w><C-w> <ESC>:bp<CR>:bd#<CR>
-
-" Angular navigation
-nnoremap <C-i> <ESC>:e %:r.ts<CR>
-nnoremap <C-o> <ESC>:e %:r.html<CR>
-nnoremap <C-p> <ESC>:e %:r.css<CR>
-
-" Import Typescript Component
-nnoremap <leader>i :TsuImport<CR>
-inoremap <leader>i <ESC>:TsuImport<CR>a
 
 " Vundle
 filetype off
@@ -77,13 +67,11 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'neowit/vim-force.com'
 
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
 
 " Typescript development
-Plugin 'leafgarland/typescript-vim'
-Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'Quramy/vim-js-pretty-template'
-Plugin 'Quramy/tsuquyomi'
 Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
