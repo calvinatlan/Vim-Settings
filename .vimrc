@@ -1,5 +1,8 @@
 set nocompatible
 
+set exrc
+set secure
+
 syntax enable
 set backspace=indent,eol,start
 

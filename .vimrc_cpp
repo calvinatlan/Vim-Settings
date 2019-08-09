@@ -1,0 +1,73 @@
+set nocompatible
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+
+set backspace=indent,eol,start
+
+set encoding=utf-8
+
+let &path.="src/include,/usr/include/AL,"
+
+" Keymaps
+let mapleader=","
+nnoremap <leader><space> :nohlsearch<CR>
+inoremap kj <esc>
+
+" Split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+
+" Buffer navigation
+nnoremap <C-Right> <ESC>:bn<CR>
+nnoremap <C-Left> <ESC>:bN<CR>
+nnoremap <C-L> <ESC>:bn<CR>
+nnoremap <C-H> <ESC>:bN<CR>
+nnoremap <C-w><C-w> <ESC>:bp<CR>:bd#<CR>
+
+" Side numbers
+set number
+set relativenumber
+
+" Buffer stuff
+set hidden
+
+" Rendering
+set wildmenu
+set lazyredraw
+set incsearch
+set hlsearch
+
+" Vundle
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Autocomplete
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()
+filetype plugin indent on
+
+" Solarized Color Scheme
+syntax enable
+set background=dark
+colorscheme solarized
+
+" Powerline
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'solarized'
+
+set makeprg=make\ -C\ ../build\ -j9
