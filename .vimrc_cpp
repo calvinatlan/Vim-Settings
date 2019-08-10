@@ -49,6 +49,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Autocomplete
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 
 Plugin 'scrooloose/nerdtree'
 
@@ -69,5 +70,3 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
-
-set makeprg=make\ -C\ ../build\ -j9
